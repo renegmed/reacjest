@@ -13,3 +13,9 @@ jest-app:
 	jest app 
 
 .PHONY: jest-app
+
+# targeting fetch-question-saga.spec.js
+jest-fetch:
+	jest fetch 
+
+.PHONY: jest-fetch
