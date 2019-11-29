@@ -17,11 +17,11 @@ describe(`The question list`, () => {
         console.log("After all!")
     });
 
-    it.only("should display a list of items", ()=>{
+    it ("should display a list of items", ()=>{
         expect(40 + 2).toEqual(42);
     })
 
-    it ("should display before the meaning of life", ()=>{
+    it.skip("should display before the meaning of life", ()=>{
         expect(40 + 2).toEqual(43); // this should fail
     })
 })
