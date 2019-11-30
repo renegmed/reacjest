@@ -24,3 +24,9 @@ install-test-renderer:
 	npm install --save-dev react-test-renderer 
 
 .PHONY: install-test-renderer 
+
+snapshot-update:
+	jest TagsList -u
+
+.PHONY: snapshot-update
+
