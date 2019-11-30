@@ -19,3 +19,8 @@ jest-fetch:
 	jest fetch 
 
 .PHONY: jest-fetch
+
+install-test-renderer:
+	npm install --save-dev react-test-renderer 
+
+.PHONY: install-test-renderer 
