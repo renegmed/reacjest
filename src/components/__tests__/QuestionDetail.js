@@ -1,5 +1,6 @@
-import { mapStateToProps } from '../QuestionDetail';
- 
+import { mapStateToProps, QuestionDetailDisplay } from '../QuestionDetail';
+import React from 'react';
+import renderer from 'react-test-renderer'; 
 
 describe(`The Question Detail Component`, () => {
 
@@ -21,7 +22,19 @@ describe(`The Question Detail Component`, () => {
             expect(componentState).toEqual(sampleQuestion);
         });
     });
-    it(`Should not regress`, () =>{
-        
+    describe (`The display element`, () => {
+        it(`Should not regress`, () =>{
+            const tree = renderer.create(
+                <QuestionDetailDisplay
+                    title="The meaning of life"
+                    body="42"
+                    answer_count={0}
+                    tags={[`hitchhiking`]}
+                />
+            );
+
+            expect(tree.toJSON()).toMatchSnapshot();
+        });
     });
+   
 });

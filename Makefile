@@ -30,3 +30,7 @@ snapshot-update:
 
 .PHONY: snapshot-update
 
+test-detail:
+	jest questiondetail --watch
+
+,PHONY: test-detail
