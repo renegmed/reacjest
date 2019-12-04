@@ -10,8 +10,12 @@ describe(`The Question Detail Component`, () => {
                 question_id: 42,
                 body: "Space is big"
             };
+            const sampleQuestion2 = {
+                question_id: 43,
+                body: "Space is big too."
+            };
             const appState = {
-                questions: [sampleQuestion]
+                questions: [sampleQuestion,sampleQuestion2]
             };
           
             const ownProps = {
